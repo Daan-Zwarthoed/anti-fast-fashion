@@ -1,0 +1,32 @@
+.trashPileDiv
+  .trashPileDivImages
+    img.image1(src="images/step1.png")
+    img.image2.hidden(src="images/step2.png")
+    img.image3.hidden(src="images/step3.png")
+    img.image4.hidden(src="images/step4.png")
+    img.image5.hidden(src="images/step5.png")
+  .trashPileDivSelectors
+    svg(width="539" height="50")
+      defs    
+        clipPath(id="clip-path")
+          rect(id="rect" x="0" y="0" height="346" width="55")
+      g.self
+        ellipse.point.p0(fill="#black" cx="25" cy="25" id="svg_1" rx="25" ry="25")     
+        line.line(fill="none" x1="59" y1="25" x2="113.32019" y2="25" id="svg_2" stroke-width="5" stroke="#000")      
+        ellipse.point.p1(fill="#black" cx="148" cy="25" id="svg_3" rx="25" ry="25")
+        line.line(fill="none" x1="182" y1="25" x2="236.32019" y2="25" id="svg_4" stroke-width="5" stroke="#000")
+        ellipse.point.p2(fill="#black" cx="271" cy="25" id="svg_5" rx="25" ry="25")
+        line.line(fill="none" x1="305" y1="25" x2="359.32019" y2="25" id="svg_6" stroke-width="5" stroke="#000")
+        ellipse.point.p3(fill="#black" cx="392" cy="25" id="svg_7" rx="25" ry="25")
+        line.line(fill="none" x1="426" y1="25" x2="480.32019" y2="25" id="svg_8" stroke-width="5" stroke="#000")
+        ellipse.point.p4(fill="#black" cx="514" cy="25" id="svg_9" rx="25" ry="25")
+      g.clip
+        ellipse.point.p0(clip-path="url(#clip-path)" fill="blue" cx="25" cy="25" id="svg_1" rx="25" ry="25")     
+        line.line(clip-path="url(#clip-path)" fill="blue" stroke="blue" x1="59" y1="25" x2="113.32019" y2="25" id="svg_2" stroke-width="5")      
+        ellipse.point.p1(clip-path="url(#clip-path)" fill="blue" cx="148" cy="25" id="svg_3" rx="25" ry="25")
+        line.line(clip-path="url(#clip-path)" fill="blue" stroke="blue" x1="182" y1="25" x2="236.32019" y2="25" id="svg_4" stroke-width="5")
+        ellipse.point.p2(clip-path="url(#clip-path)" fill="blue" cx="271" cy="25" id="svg_5" rx="25" ry="25")
+        line.line(clip-path="url(#clip-path)" fill="blue" stroke="blue" x1="305" y1="25" x2="359.32019" y2="25" id="svg_6" stroke-width="5")
+        ellipse.point.p3(clip-path="url(#clip-path)" fill="blue" cx="392" cy="25" id="svg_7" rx="25" ry="25")
+        line.line(clip-path="url(#clip-path)" fill="blue" stroke="blue" x1="426" y1="25" x2="480.32019" y2="25" id="svg_8" stroke-width="5")
+        ellipse.point.p4(clip-path="url(#clip-path)" fill="blue" cx="514" cy="25" id="svg_9" rx="25" ry="25")
