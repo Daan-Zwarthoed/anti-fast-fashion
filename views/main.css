@@ -27,3 +27,23 @@ html {
   height: 539px;
   width: 539px;
 }
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+.lineGraph * {
+  transition: 0.5s;
+}
+
+.lineGraph {
+  display: flex;
+  flex-direction: row;
+}
+
+.lineGraphSelectors {
+  display: flex;
+  flex-direction: column;
+}

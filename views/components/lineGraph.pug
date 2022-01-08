@@ -1,0 +1,12 @@
+- const colorPerTopic = lineGraphData[0]
+- const lines = Object.keys(lineGraphData[1])
+- lines.shift()
+.lineGraph
+  .lineGraphDiv
+  .lineGraphSelectors
+    each line in lines 
+      .lineGraphInputAndLabel
+        input(type="checkbox" id=line style=`accent-color: ${colorPerTopic[line]}` checked)
+        label(for=line)= line
+
+

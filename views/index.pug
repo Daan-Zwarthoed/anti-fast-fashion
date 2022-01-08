@@ -9,7 +9,9 @@ html(lang="nl")
     title Amsterdam graffiti
 
   body 
-    include trashPile/trashPile.pug
+    include components/trashPile.pug
+    include components/lineGraph.pug
 
+  script(src="https://d3js.org/d3.v7.min.js")
   script(type="module")
     include ./main.js
