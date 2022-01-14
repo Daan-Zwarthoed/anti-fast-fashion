@@ -1,4 +1,3 @@
-// https://www.sciencedirect.com/science/article/abs/pii/S0921344916301501
 // set the dimensions and margins of the graph
 const margin = { top: 20, right: 20, bottom: 30, left: 50 },
   width = 960 - margin.left - margin.right,
@@ -37,7 +36,13 @@ function drawLineGraph(data) {
     })
   );
   y.domain([
-    0,
+    d3.min(data, function (d) {
+      let min = 1000;
+      dataKeys.forEach((dataKey) => {
+        min = Math.min(d[dataKey]) < min ? Math.min(d[dataKey]) : min;
+      });
+      return min;
+    }),
     d3.max(data, function (d) {
       let max = 0;
       dataKeys.forEach((dataKey) => {

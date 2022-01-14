@@ -7,6 +7,6 @@
     each line in lines 
       .lineGraphInputAndLabel
         input(type="checkbox" id=line style=`accent-color: ${colorPerTopic[line]}` checked)
-        label(for=line)= line
+        label(for=line)= line.replace("-"," ")
 
 
