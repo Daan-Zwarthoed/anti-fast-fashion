@@ -1,0 +1,18 @@
+.differentTransition {
+  transition: all 2s cubic-bezier(1, 0, 1, 0);
+}
+
+.trashPileDivImages {
+  position: relative;
+  height: 539px;
+  width: 539px;
+}
+
+.trashPileDivImages img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 539px;
+  width: 539px;
+}

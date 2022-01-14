@@ -1,9 +1,15 @@
 import { trashPileSelectorSelected } from "./componentsJs/trashPile.js";
 import { makeLineGraph, updateLineGraph } from "./componentsJs/lineGraph.js";
 
-// trashpile
 const trashPileDivSelectors = document.querySelector(".trashPileDivSelectors");
+const lineGraphSelectors = document.querySelector(".lineGraphSelectors");
+const lineGraphSelectorsInputs = document.querySelectorAll(
+  ".lineGraphSelectors input"
+);
+const trashPileFull = document.querySelector(".trashPileFull");
+const body = document.querySelector("body");
 
+// Trashpile
 trashPileDivSelectors.addEventListener("click", function (event) {
   trashPileSelectorSelected(event);
 });
@@ -11,10 +17,6 @@ trashPileDivSelectors.addEventListener("click", function (event) {
 // linegraph
 makeLineGraph();
 
-const lineGraphSelectors = document.querySelector(".lineGraphSelectors");
-const lineGraphSelectorsInputs = document.querySelectorAll(
-  ".lineGraphSelectors input"
-);
 lineGraphSelectors.addEventListener("click", function (event) {
   if (event.target.parentElement.classList[0] === "lineGraphInputAndLabel") {
     const unCheckedInputs = [];
@@ -24,3 +26,12 @@ lineGraphSelectors.addEventListener("click", function (event) {
     updateLineGraph(unCheckedInputs);
   }
 });
+
+// Trashpiletofullpage
+trashPileFull.addEventListener("click", function (event) {
+  body.classList.add("showFullPage");
+});
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};

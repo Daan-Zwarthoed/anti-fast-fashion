@@ -3,57 +3,27 @@ html {
   margin: 0;
   padding: 0;
   transition: 2s;
+  font-family: "Old Standard TT", serif;
 }
 
-.differentTransition {
-  transition: all 2s cubic-bezier(1, 0, 1, 0);
+body {
+  background-color: #ece4d3;
+  padding-top: 5vh;
+  overflow: hidden;
+}
+
+.showFullPage {
+  overflow: auto;
 }
 
 .hidden {
   opacity: 0;
 }
 
-.trashPileDivImages {
-  position: relative;
-  height: 539px;
-  width: 539px;
-}
-
-.trashPileDivImages img {
+.backgroundBlob {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 539px;
-  width: 539px;
-}
-
-.line {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 2px;
-}
-
-.lineGraph * {
-  transition: 0.5s;
-}
-
-.lineGraph {
-  display: flex;
-  flex-direction: row;
-}
-
-.lineGraphSelectors {
-  display: flex;
-  flex-direction: column;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-  overflow: visible;
-  display: block;
-}
-.icon path {
-  stroke: black;
+  height: 90vh;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }

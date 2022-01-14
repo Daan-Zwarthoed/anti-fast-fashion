@@ -4,11 +4,19 @@ html(lang="nl")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    style 
-      include ./main.css
-    title Amsterdam graffiti
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+  style 
+    include ./main.css
+    include ./components/landing.css
+    include ./components/lineGraph.css
+    include ./components/trashPile.css
+  title Amsterdam graffiti
 
   body 
+    img.backgroundBlob(src="images/backgroundBlob.svg")
+    include components/landing.pug
     include components/trashPile.pug
     include components/lineGraph.pug
 
