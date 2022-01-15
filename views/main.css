@@ -14,10 +14,12 @@ body {
 
 .showFullPage {
   overflow: auto;
+  overflow-x: hidden;
 }
 
 .hidden {
   opacity: 0;
+  visibility: hidden;
 }
 
 .backgroundBlob {

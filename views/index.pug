@@ -10,15 +10,19 @@ html(lang="nl")
   style 
     include ./main.css
     include ./components/landing.css
+    include ./components/details.css
+    include ./components/scroll.css
     include ./components/lineGraph.css
     include ./components/trashPile.css
+
   title Amsterdam graffiti
 
   body 
     img.backgroundBlob(src="images/backgroundBlob.svg")
     include components/landing.pug
+    include components/details.pug
+    include components/scroll.pug
     include components/trashPile.pug
-    include components/lineGraph.pug
 
   script(src="https://d3js.org/d3.v7.min.js")
   script(type="module")
