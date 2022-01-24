@@ -1,0 +1,34 @@
+.trashDetails {
+  position: fixed;
+  right: 100%;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.trashDetails .paddingDiv {
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.trashDetails article {
+  height: 100%;
+}
+
+.trashDetails h2 {
+  font-size: 2rem;
+}
+
+.trashDetails p {
+  margin: 1rem 0 1rem 0;
+}
+.trashDetails p span {
+  font-size: 1.7rem;
+}
+
+.trashDetails img {
+  width: 40vw;
+  height: 40vw;
+}

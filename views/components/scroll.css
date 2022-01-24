@@ -1,0 +1,31 @@
+.scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+}
+
+.scroll h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.fastFashionMarkers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.fastFashionMarkers .marker {
+  width: 30%;
+  margin: 0.5rem 0 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fastFashionMarkers .marker img {
+  margin-top: auto;
+  margin-bottom: auto;
+}

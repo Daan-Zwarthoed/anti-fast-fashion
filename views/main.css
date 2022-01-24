@@ -9,23 +9,24 @@ html {
 body {
   background-color: #ece4d3;
   padding-top: 5vh;
-  overflow: hidden;
+  position: relative;
 }
 
-.showFullPage {
-  overflow: auto;
-  overflow-x: hidden;
+body.toTheRight {
+  overflow: hidden;
+  transform: translateX(-100%);
+}
+
+body.toTheLeft {
+  overflow: hidden;
+  transform: translateX(100%);
+}
+
+body.fullPageShowing {
+  height: auto;
 }
 
 .hidden {
   opacity: 0;
   visibility: hidden;
-}
-
-.backgroundBlob {
-  position: absolute;
-  height: 90vh;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
 }

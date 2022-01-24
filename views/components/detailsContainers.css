@@ -1,0 +1,36 @@
+.containerDetails {
+  position: fixed;
+  left: 100%;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.containerDetails .paddingDiv {
+  padding: 3rem 0 3rem 3rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.containerDetails h2 {
+  font-size: 2rem;
+}
+
+.containerDetails .piles {
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.containerDetails .pile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.containerDetails .pile img {
+}

@@ -11,6 +11,7 @@ const body = document.querySelector("body");
 const details = document.querySelector(".details");
 const trashDetails = document.querySelector(".details .trash");
 const containersDetails = document.querySelector(".details .containers");
+const landing = document.querySelector(".landing");
 
 // Trashpile
 trashPileDivSelectors.addEventListener("click", function (event) {
@@ -34,27 +35,27 @@ lineGraphSelectors.addEventListener("click", function (event) {
 trashPileFull.addEventListener("click", function (event) {
   if (body.classList.contains("fullPageShowing")) {
     if (event.target.classList.contains("trashPileDown")) {
-      details.classList.remove("hidden");
-      trashDetails.classList.remove("hidden");
+      body.classList.toggle("toTheLeft");
     } else if (event.target.classList.contains("trashPileUp")) {
-      details.classList.remove("hidden");
-      containersDetails.classList.remove("hidden");
+      body.classList.toggle("toTheRight");
     }
-  }
-  body.classList.add("showFullPage");
-  setTimeout(() => {
-    body.classList.add("fullPageShowing");
-  }, 2000);
-});
-
-details.addEventListener("click", function (event) {
-  if (event.target.classList.contains("details")) {
-    details.classList.add("hidden");
-    trashDetails.classList.add("hidden");
-    containersDetails.classList.add("hidden");
   }
 });
 
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
+  landing.scrollTo(0, 0);
 };
+
+landing.addEventListener("scroll", function (event) {
+  event.target.scrollTop < 10
+    ? landing.classList.remove("stateIsScroll")
+    : landing.classList.add("stateIsScroll");
+
+  if (event.target.scrollTop === window.innerHeight) {
+    body.classList.add("showFullPage");
+    setTimeout(() => {
+      body.classList.add("fullPageShowing");
+    }, 2000);
+  }
+});

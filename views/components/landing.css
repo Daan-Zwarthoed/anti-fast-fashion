@@ -1,9 +1,76 @@
 .landing {
-  height: 95vh;
+  height: 100vh;
   position: relative;
+  overflow-y: scroll;
+  z-index: 20;
 }
 
-h1 {
+.toTheLeft .landing,
+.toTheRight .landing {
+  overflow-y: visible !important;
+  overflow-x: visible !important;
+}
+
+.totalHeight {
+  height: 200vh;
+}
+
+.sticking {
+  height: 95vh;
+  top: 20px;
+  position: sticky;
+}
+
+.backgroundBlob {
+  position: absolute;
+  height: 90vh;
+  top: 10%;
+  right: 0;
+  z-index: -1;
+}
+
+.scrollStateTitle,
+.scrollStatePile,
+.stateIsScroll .landingStateTitle {
+  opacity: 0;
+}
+
+.stateIsScroll .scrollStateTitle {
+  opacity: 1;
+}
+
+.landingStateTitle,
+.scrollStateTitle {
+  width: 90vw;
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.landingStateTitle h1,
+.landingStateTitle h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.landingStateTitle h1 {
+  font-size: 4rem;
+}
+
+.landingStateTitle .sale {
+  position: absolute;
+  top: 3rem;
+  left: 5rem;
+}
+
+.landingStateTitle .sale50 {
+  position: absolute;
+  top: 3rem;
+  right: 7.5rem;
+}
+
+.landingState h1 {
   width: 100vw;
   text-align: center;
   display: flex;
@@ -12,33 +79,32 @@ h1 {
   font-size: 2rem;
 }
 
-.bigTitle {
-  font-size: 6rem;
-  font-weight: bold;
-  display: flex;
-}
-
-.textAndArrowTrash,
-.textAndArrowBin {
+.scrollStateTitle .textAndArrowTitle {
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: absolute;
-  top: 15%;
-  opacity: 0;
+  top: 6.5rem;
+  right: 13rem;
 }
 
-.textAndArrowTrash h2,
-.textAndArrowBin h2 {
-  width: 20rem;
+.scrollStateTitle h2 {
+  font-size: 2.5rem;
 }
 
-.textAndArrowTrash {
-  left: 10%;
+.scrollStateTitle .textAndArrowTitle img {
+  height: 4rem;
+  width: 5rem;
 }
 
-.textAndArrowBin {
-  right: 10%;
+.scrollStateTitle .textAndArrowTitle h3 {
+  width: 10rem;
+  text-align: center;
+}
+
+.scrollStateTitle .sale5 {
+  position: absolute;
+  top: 1rem;
+  right: 6rem;
 }
 
 .trashPileFull {
@@ -65,19 +131,6 @@ h1 {
   left: 40%;
 }
 
-.trashPileFull .textAndArrowLanding {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 20%;
-  left: 5%;
-}
-
-.trashPileFull .textAndArrowLanding p {
-  width: 10rem;
-  margin-right: 1rem;
-}
-
 .scrollDown {
   position: absolute;
   bottom: 1rem;
@@ -87,13 +140,6 @@ h1 {
   opacity: 0;
 }
 
-.showFullPage h1,
-.showFullPage .textAndArrowLanding {
-  opacity: 0;
-}
-
-.showFullPage .textAndArrowTrash,
-.showFullPage .textAndArrowBin,
 .showFullPage .scrollDown {
   opacity: 1;
 }
