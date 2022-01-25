@@ -6,7 +6,9 @@
 }
 
 .toTheLeft .landing,
-.toTheRight .landing {
+.toTheRight .landing,
+.toTheLeft .trashPileFull,
+.toTheRight .trashPileFull {
   overflow-y: visible !important;
   overflow-x: visible !important;
 }
@@ -59,15 +61,13 @@
 }
 
 .landingStateTitle .sale {
-  position: absolute;
   top: 3rem;
-  left: 5rem;
+  left: 3rem;
 }
 
 .landingStateTitle .sale50 {
-  position: absolute;
   top: 3rem;
-  right: 7.5rem;
+  right: 4rem;
 }
 
 .landingState h1 {
@@ -85,6 +85,7 @@
   position: absolute;
   top: 6.5rem;
   right: 13rem;
+  font-style: italic;
 }
 
 .scrollStateTitle h2 {
@@ -102,9 +103,8 @@
 }
 
 .scrollStateTitle .sale5 {
-  position: absolute;
-  top: 1rem;
-  right: 6rem;
+  top: 1.8rem;
+  right: 10rem;
 }
 
 .trashPileFull {
@@ -113,6 +113,7 @@
   position: absolute;
   bottom: 0;
   height: 70vh;
+  overflow: hidden;
 }
 
 .trashPileFull > img {
@@ -120,15 +121,18 @@
   position: absolute;
   bottom: 0;
   cursor: pointer;
+  transform: scale(0.9);
 }
 
 .trashPileFull > img:first-of-type {
   right: 40%;
   z-index: 1;
+  transform-origin: bottom right;
 }
 
 .trashPileFull > img:last-of-type {
   left: 40%;
+  transform-origin: bottom left;
 }
 
 .scrollDown {
@@ -140,12 +144,17 @@
   opacity: 0;
 }
 
+.showFullPage .landing {
+  overflow-y: hidden;
+}
+
 .showFullPage .scrollDown {
   opacity: 1;
 }
 
 .showFullPage .trashPileFull > img:first-of-type {
   right: -10%;
+  bottom: -30%;
 }
 
 .showFullPage .trashPileFull > img:last-of-type {

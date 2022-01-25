@@ -17,6 +17,14 @@
   flex-direction: column;
 }
 
+.lineGraphInputAndLabel {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.lineGraphInputAndLabel input {
+  margin-right: 0.3rem;
+}
+
 .icon {
   width: 24px;
   height: 24px;

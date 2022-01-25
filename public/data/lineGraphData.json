@@ -1,86 +1,86 @@
 [  
    {
-      "Gebruik-kleding": "black",
-      "Verkoop-kleding": "blue"
+      "Verkoop-kleding": "black",
+      "Gebruik-kleding": "#E47823"
    },
    {
       "Date": 2000,
-      "Gebruik-kleding": "100",
-      "Verkoop-kleding": "200"
+      "Verkoop-kleding": "100",
+      "Gebruik-kleding": "200"
    },
    {
       "Date": 2001,
-      "Gebruik-kleding": "104",
-      "Verkoop-kleding": "198"
+      "Verkoop-kleding": "104",
+      "Gebruik-kleding": "198"
    },
    {
       "Date": 2002,
-      "Gebruik-kleding": "108",
-      "Verkoop-kleding": "194"
+      "Verkoop-kleding": "108",
+      "Gebruik-kleding": "194"
    },
    {
       "Date": 2003,
-      "Gebruik-kleding": "112",
-      "Verkoop-kleding": "191"
+      "Verkoop-kleding": "112",
+      "Gebruik-kleding": "191"
    },
    {
       "Date": 2004,
-      "Gebruik-kleding": "117",
-      "Verkoop-kleding": "187"
+      "Verkoop-kleding": "117",
+      "Gebruik-kleding": "187"
    },
    {
       "Date": 2005,
-      "Gebruik-kleding": "125",
-      "Verkoop-kleding": "182"
+      "Verkoop-kleding": "125",
+      "Gebruik-kleding": "182"
    },
    {
       "Date": 2006,
-      "Gebruik-kleding": "133",
-      "Verkoop-kleding": "178"
+      "Verkoop-kleding": "133",
+      "Gebruik-kleding": "178"
    },
    {
       "Date": 2007,
-      "Gebruik-kleding": "144",
-      "Verkoop-kleding": "176"
+      "Verkoop-kleding": "144",
+      "Gebruik-kleding": "176"
    },
    {
       "Date": 2008,
-      "Gebruik-kleding": "150",
-      "Verkoop-kleding": "173"
+      "Verkoop-kleding": "150",
+      "Gebruik-kleding": "173"
    },
    {
       "Date": 2009,
-      "Gebruik-kleding": "156",
-      "Verkoop-kleding": "170"
+      "Verkoop-kleding": "156",
+      "Gebruik-kleding": "170"
    },
    {
       "Date": 2010,
-      "Gebruik-kleding": "163",
-      "Verkoop-kleding": "167"
+      "Verkoop-kleding": "163",
+      "Gebruik-kleding": "167"
    },
    {
       "Date": 2011,
-      "Gebruik-kleding": "172",
-      "Verkoop-kleding": "165"
+      "Verkoop-kleding": "172",
+      "Gebruik-kleding": "165"
    },
    {
       "Date": 2012,
-      "Gebruik-kleding": "179",
-      "Verkoop-kleding": "164"
+      "Verkoop-kleding": "179",
+      "Gebruik-kleding": "164"
    },
    {
       "Date": 2013,
-      "Gebruik-kleding": "188",
-      "Verkoop-kleding": "163"
+      "Verkoop-kleding": "188",
+      "Gebruik-kleding": "163"
    },
    {
       "Date": 2014,
-      "Gebruik-kleding": "192",
-      "Verkoop-kleding": "162"
+      "Verkoop-kleding": "192",
+      "Gebruik-kleding": "162"
    },
    {
       "Date": 2015,
-      "Gebruik-kleding": "198",
-      "Verkoop-kleding": "161"
+      "Verkoop-kleding": "198",
+      "Gebruik-kleding": "161"
    }
 ]

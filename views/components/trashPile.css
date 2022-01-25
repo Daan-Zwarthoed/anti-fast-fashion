@@ -4,15 +4,17 @@
 
 .trashPileDivImages {
   position: relative;
-  height: 539px;
-  width: 539px;
+  height: 400px;
 }
 
 .trashPileDivImages img {
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
-  height: 539px;
-  width: 539px;
+  transform: translateX(-50%);
+  height: 300;
+}
+
+.self .point:hover {
+  cursor: pointer;
 }

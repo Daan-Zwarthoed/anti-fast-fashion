@@ -6,17 +6,15 @@ let currentStep = 0;
 function returnWidth(nextStep) {
   switch (nextStep) {
     case 0:
-      return "55";
+      return "0";
     case 1:
-      return "180";
+      return "369.34017";
     case 2:
-      return "300";
+      return "595.34018";
     case 3:
-      return "420";
-    case 4:
-      return "540";
+      return "641.34022";
     default:
-      return "55";
+      return "0";
   }
 }
 
@@ -32,7 +30,7 @@ function changePile(nextStep) {
 }
 
 const trashPileInterval = setInterval(() => {
-  const nextStep = currentStep === 4 ? 0 : currentStep + 1;
+  const nextStep = currentStep === 3 ? 0 : currentStep + 1;
   changePile(nextStep);
 }, 3000);
 

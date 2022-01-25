@@ -1,0 +1,74 @@
+.carrousel {
+  overflow: hidden;
+  width: 100vw;
+  margin-bottom: 3rem;
+  position: relative;
+  transition: 1s;
+}
+
+.carrouselInner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  left: -30vw;
+}
+
+.carrousel .leftArrow,
+.carrousel .rightArrow {
+  position: absolute;
+  height: 8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+
+.carrousel .leftArrow:hover,
+.carrousel .rightArrow:hover {
+  cursor: pointer;
+}
+
+.carrousel .leftArrow {
+  left: 2rem;
+}
+
+.carrousel .rightArrow {
+  right: 2rem;
+}
+
+.carrousel .carrouselElement {
+  width: 30vw;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0.5rem 0 0.5rem;
+  overflow: hidden;
+}
+
+.carrousel .carrouselElement > * {
+  width: 30vw !important;
+}
+
+.carrouselElement:first-of-type {
+  margin-left: 1rem;
+}
+
+.carrouselElement:last-of-type {
+  margin-right: 1rem;
+}
+
+.carrousel .carrouselElement > * {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.carrousel .carrouselElement img {
+  width: 100%;
+}
+
+.carrousel .carrouselElement a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}

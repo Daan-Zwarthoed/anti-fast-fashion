@@ -30,3 +30,26 @@ body.fullPageShowing {
   opacity: 0;
   visibility: hidden;
 }
+
+.sale,
+.sale5,
+.sale50,
+.sale9 {
+  position: absolute;
+  max-height: 8rem;
+  animation: swing 4s;
+  transform-origin: top center;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(40deg);
+  }
+}
