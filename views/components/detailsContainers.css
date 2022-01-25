@@ -52,17 +52,13 @@
   align-items: flex-end;
 }
 
-.containerDetails .pilePopUp img {
+.containerDetails .pilePopUp > img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
   max-width: 80vw;
-}
-
-.containerDetails .pilePopUp .closePopUp {
-  font-size: 3rem;
 }
 
 .containerDetails .pilePopUp .closePopUp:hover {

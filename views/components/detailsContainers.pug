@@ -7,7 +7,7 @@ mixin pile(precent, title, image, textPopUp, backgroundPopUp, videoPopUp)
       img(src=`images/backgroundPopUp/${backgroundPopUp}.png`)
       p=textPopUp
       .closeAndVideo
-        .closePopUp &#10006;
+        img.closePopUp(src="images/closePopUp.png")
         if(videoPopUp)
           video(controls autoplay name="media")
           source(src="https://download.omroep.nl/nos/content/mp4/web01/2022/01/03/63667/mp4_web01.mp4" type="video/mp4")
