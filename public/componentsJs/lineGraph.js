@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
 const margin = { top: 20, right: 20, bottom: 30, left: 50 },
-  width = 960 - margin.left - margin.right,
-  height = 500 - margin.top - margin.bottom;
+  width = 850 - margin.left - margin.right,
+  height = 400 - margin.top - margin.bottom;
 // parse the date / time
 const parseTime = d3.timeParse("%Y");
 
@@ -94,14 +94,5 @@ export function makeLineGraph() {
   // Get the data
   d3.json("./data/lineGraphData.json").then((data) => {
     drawLineGraph(data);
-  });
-}
-
-export function updateLineGraph(unCheckedInputs) {
-  if (svg.selectAll(".hidden").node())
-    svg.selectAll(".hidden").node().classList.remove("hidden");
-
-  unCheckedInputs.forEach((unCheckedInput) => {
-    svg.selectAll(`.${unCheckedInput}`).node().classList.add("hidden");
   });
 }

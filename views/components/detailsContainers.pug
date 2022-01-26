@@ -10,13 +10,15 @@ mixin pile(precent, title, image, textPopUp, backgroundPopUp, videoPopUp)
         img.closePopUp(src="images/closePopUp.png")
         if(videoPopUp)
           video(controls autoplay name="media")
-          source(src="https://download.omroep.nl/nos/content/mp4/web01/2022/01/03/63667/mp4_web01.mp4" type="video/mp4")
+            source(src=videoPopUp type="video/mp4")
 
 .containerDetails
   .paddingDiv
     h2 DE KLEDINGCONTAINERS
+    img.backContainer(src="images/leftCarrouselArrow.png")
+
     .piles
-      +pile("1%", "Wordt gerecycled", "recyclePile", "Maar 1% van alle ingezamelde kleding kan worden gerecycled. Dit betekend dat er nieuw garen van gemaakt wordt dat vervolgens gebruikt wordt om nieuwe kledingstukken van te maken.", "firstBackground")
-      +pile("13%", "Wordt gedowncycled", "downcyclePile", "Dit deel wordt gedowncycled. Dat betekent dat er bijvoorbeeld stofdoeken van gemaakt worden of dat de vezels gebruikt worden als matrasvulling. Het nadeel van downcyclen is dat je dit maar 1 keer kan doen. Nadat de kleding is verwerkt tot stofdoek of matrasvulling wordt het nooit meer kleding.", "secondBackground")
-      +pile("71%", "Gaat naar andere landen", "otherCountryPile", "Dit deel gaat naar andere landen, bijvoorbeeld in Afrika. In landen als Ghana ontstaan hierdoor grote problemen. Jij denkt dat je kleding bij arme gezinnen terecht komt, maar dit is helaas niet de realiteit. Bekijk het filmpje hiernaast om te zien wat er met jouw kleding gebeurd. Wil je nog meer zien over dit onderwerp? De BNNVARA maakte hier een docu over, die kan je hier zien.", "thirdBackground")
-      +pile("15%", "Wordt verbrand", "ovenPile", "Dit gedeelte beland alsnog in de verbrandingsoven. Dit is helaas het geval, omdat veel mensen kapotte kleding in de container gooien. Ook wordt er veel afval in de kledingcontainers gevonden; zelfs luiers en etensresten..", "fourthBackground", "hey") 
+      +pile("1%", "Wordt gerecycled", "recyclePile", "Maar 1% van alle ingezamelde kleding kan worden gerecycled. Dit betekend dat er nieuw garen van gemaakt wordt dat vervolgens gebruikt wordt om nieuwe kledingstukken van te maken.", "pantsRight")
+      +pile("13%", "Wordt gedowncycled", "downcyclePile", "Dit deel wordt gedowncycled. Dat betekent dat er bijvoorbeeld stofdoeken van gemaakt worden of dat de vezels gebruikt worden als matrasvulling. Het nadeel van downcyclen is dat je dit maar 1 keer kan doen. Nadat de kleding is verwerkt tot stofdoek of matrasvulling wordt het nooit meer kleding.", "dressRight")
+      +pile("71%", "Gaat naar andere landen", "otherCountryPile", "Dit deel gaat naar andere landen, bijvoorbeeld in Afrika. In landen als Ghana ontstaan hierdoor grote problemen. Jij denkt dat je kleding bij arme gezinnen terecht komt, maar dit is helaas niet de realiteit. Bekijk het filmpje hiernaast om te zien wat er met jouw kleding gebeurd. Wil je nog meer zien over dit onderwerp? De BNNVARA maakte hier een docu over, die kan je hier zien.", "pantsLeft", "https://download.omroep.nl/nos/content/mp4/web01/2022/01/03/63667/mp4_web01.mp4")
+      +pile("15%", "Wordt verbrand", "ovenPile", "Dit gedeelte beland alsnog in de verbrandingsoven. Dit is helaas het geval, omdat veel mensen kapotte kleding in de container gooien. Ook wordt er veel afval in de kledingcontainers gevonden; zelfs luiers en etensresten..", "turtleLeftUp") 

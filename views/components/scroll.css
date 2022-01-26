@@ -1,3 +1,8 @@
+.scroll h4,
+.scroll label,
+.scroll p {
+  font-family: "Work Sans", sans-serif;
+}
 .scroll {
   display: flex;
   flex-direction: column;
@@ -5,46 +10,133 @@
   padding: 3rem 3rem 0 3rem;
 }
 
+.title {
+  text-align: center;
+}
 .scroll h2.title {
   font-size: 2rem;
-  text-align: center;
-  padding: 0 5vw 0 5vw;
+  padding: 0 5vw 1.5rem 5vw;
 }
 
 .scroll h3.title {
   font-size: 1.5rem;
+  padding: 0 10vw 0 10vw;
 }
 
 .scroll h4.title {
   padding: 0 25vw 0 25vw;
-  text-align: center;
 }
 .scroll .firstTitle {
   position: relative;
+  margin-bottom: 10rem;
 }
 
 .scroll .firstTitle .sale9 {
   top: 1.3rem;
-  right: 7rem;
+  right: 10rem;
 }
 
-.fastFashionMarkers {
+.scroll .firstTitle h4 {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.titleAndMoreInfo {
+  position: relative;
+  width: 100%;
+}
+
+.moreInfo {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  background-color: #e47823;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moreInfo:hover {
+  cursor: pointer;
+}
+
+.moreInfo > h3 {
+  text-align: center;
+  transform: rotate(-14.23deg);
+}
+
+.moreInfo .moreInfoPopUp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  background-size: cover;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding-bottom: 3rem;
+  z-index: -1;
+  transition: 1s;
+  transition-property: opacity;
 }
 
-.fastFashionMarkers .marker {
-  width: 30%;
-  margin: 0.5rem 0 0.5rem 0;
+.moreInfo .moreInfoPopUp article {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-.fastFashionMarkers .marker img {
-  margin-top: auto;
-  margin-bottom: auto;
+.moreInfo .moreInfoPopUp p,
+.moreInfo .moreInfoPopUp .closePopUp {
+  background-color: #efdbb0;
+}
+
+.moreInfo .moreInfoPopUp p {
+  padding: 0.5rem;
+}
+
+.moreInfo .moreInfoPopUp .backgroundClothing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  max-width: 80vw;
+}
+
+.moreInfo .moreInfoPopUp .closePopUp {
+  width: auto;
+  height: 3rem;
+}
+
+.moreInfo .moreInfoPopUp .closePopUp:hover {
+  cursor: pointer;
+}
+
+.moreInfo .showMoreInfoPopUp {
+  opacity: 1 !important;
+  z-index: 20;
+}
+
+.textAndArrowMoreInfo {
+  position: absolute;
+  bottom: -3.5rem;
+  left: 8.8rem;
+}
+
+.textAndArrowMoreInfo img {
+  transform: rotate(-20deg);
+}
+
+.textAndArrowMoreInfo p {
+  width: 16rem;
+  text-align: center;
+}
+.carrouselHeader {
+  position: relative;
+}
+.carrouselHeader .sale50 {
+  top: 3.5rem;
+  right: 10rem;
+  z-index: 10;
 }

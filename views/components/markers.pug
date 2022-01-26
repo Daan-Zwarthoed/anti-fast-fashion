@@ -1,0 +1,15 @@
+mixin marker(title, image, textPopUp, backgroundPopUp)
+  .marker  
+    img(src=`images/fastFashionMarkers/${image}.png`)
+    p= title
+    .markerPopUp
+      img.backgroundClothing(src=`images/backgroundPopUp/${backgroundPopUp}.png`)
+      p=textPopUp
+      img.closePopUp(src="images/closePopUp.png")
+.fastFashionMarkers
+  +marker("Ze zien duurzaamheid als een trend", "handsHoldingWorld", "Veel merken gebruiken tegenwoordig de woorden ‘groen’, ‘duurzaam’ of ‘verantwoord’. Geloof deze merken nooit meteen op hun woord. Onderzoek altijd wat er dan zo duurzaam is aan dit merk. Een merk is nog lang niet duurzaam wanneer het hier en daar stoffen als biokatoen en tencel gebruikt. Ook zeker niet H&M met hun zogenaamde Conscious Collection.", "dressRight",)
+  +marker("Ze zijn niet transparant over de productieketen", "factory", "Vertelt een merk niet waar de kleding vandaan komt en hoe de items worden gemaakt? Dan zijn ze niet transparant over de productieketen. Hoogstwaarschijnlijk is dit omdat ze zich beter voor willen doen dan ze zijn. Ze leiden je waarschijnlijk liever af met fancy one liners, grote kortingen of knappe beelden.", "pantsRight",)
+  +marker("Ze hebben een zeer korte doorlooptijd", "clock", "Het méést typerende aspect aan een fast fashion merk: het feit dat ze razendsnel kleding ontwikkelen en in de rekken kunnen krijgen. Ze surfen zonder schroom op de trendgolf en deinzen niet terug om buitenlandse fabrieken tegen elkaar uit te spelen voor de laagste prijs en de snelste levertermijn. Bijvoorbeeld de Zara produceert wel 24 collecties per jaar.", "turtleLeftUp",)
+  +marker("Ze verkopen soms wel 100 verschillende stijlen", "clothingItems", "Veel modemerken verkopen zeer veel verschillende stijlen van hetzelfde type kledingstuk.  Neem als voorbeeld SHEIN. Dit merk zet wekelijks gemiddeld 3000 nieuwe stijlen online. ", "turtleLeftUp",)
+  +marker("Ze hebben constant uitverkoop", "oftenSale", "Veel winkels en modeketens bieden regelmatig kleding aan met grote kortingen.  Dit is eigenlijk een lokkertje om jou over te halen om vaker kleding te laten kopen. Hierbij verhogen ze vaak de prijzen vlak voordat de sale begint. Dit doen ze om te zorgen dat ze geen verlies lopen aan het einde van de looptijd. ", "dressRight",)
+  +marker("Ze gebruiken goedkope materialen", "cheapMaterials", "Het probleem van deze tijd is het gebruik van goedkope, slechte en niet-duurzame materialen. Veel kledingmerken, ook de dure merken zoals Calvin Klein en Tommy Hilfiger, maken gebruik van dit soort materialen. Zij doen dit om zoveel mogelijk marge te hebben op dit soort producten. Kwalitatieve kleding herken je aan de goed uitziende stikstels en naden, de dikte van de stof en de weefseldichtheid. Verder kan je het herkennen aan de pasvorm. Lubbert het snel, dan zal het vast geen kwalitatieve kleding zijn.", "pantsLeft",)

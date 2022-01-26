@@ -3,10 +3,15 @@
 - lines.shift()
 .lineGraph
   .lineGraphDiv
-  .lineGraphSelectors
+  .lineGraphLegend
     each line in lines 
-      .lineGraphInputAndLabel
-        input(type="checkbox" id=line style=`accent-color: ${colorPerTopic[line]}` checked)
-        label(for=line)= line.replace("-"," ")
+      .lineGraphPAndDiv
+        if line === "Verkoop-kleding"
+          p Hoeveelheid gekochte kleding in miljoen stuks.
+        else if line === "Gebruik-kleding"
+          p Het aantal keer dragen van een kledingstuk
+        else
+          p= line.replace("-"," ")
+        .lineColorExample(style=`background-color: ${colorPerTopic[line]}`)
 
 

@@ -6,9 +6,7 @@
 }
 
 .toTheLeft .landing,
-.toTheRight .landing,
-.toTheLeft .trashPileFull,
-.toTheRight .trashPileFull {
+.toTheRight .landing {
   overflow-y: visible !important;
   overflow-x: visible !important;
 }
@@ -25,8 +23,8 @@
 
 .backgroundBlob {
   position: absolute;
-  height: 90vh;
-  top: 10%;
+  height: 80vh;
+  top: 10vh;
   right: 0;
   z-index: -1;
 }
@@ -62,12 +60,12 @@
 
 .landingStateTitle .sale {
   top: 3rem;
-  left: 3rem;
+  left: 11rem;
 }
 
 .landingStateTitle .sale50 {
   top: 3rem;
-  right: 4rem;
+  right: 12rem;
 }
 
 .landingState h1 {
@@ -164,42 +162,6 @@
 .fullPageShowing .trashPileFull > img:hover {
   animation: shake 1s;
   animation-iteration-count: infinite;
-}
-
-@keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
 }
 
 .showFullPage .scrollDown {

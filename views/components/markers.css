@@ -1,0 +1,79 @@
+.fastFashionMarkers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 6rem;
+  position: relative;
+}
+
+.fastFashionMarkers .marker {
+  width: 30%;
+  margin: 0.5rem 0 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fastFashionMarkers .marker > img {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 80%;
+  height: auto;
+}
+
+.fastFashionMarkers .marker > img:hover {
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+
+.fastFashionMarkers .marker > p {
+  text-align: center;
+}
+
+.fastFashionMarkers .markerPopUp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  z-index: -1;
+  transition: 1s;
+  transition-property: opacity;
+}
+
+.fastFashionMarkers .markerPopUp p,
+.fastFashionMarkers .markerPopUp .closePopUp {
+  background-color: #efdbb0;
+}
+
+.fastFashionMarkers .markerPopUp p {
+  padding: 0.5rem;
+}
+
+.fastFashionMarkers .markerPopUp .backgroundClothing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  max-width: 80vw;
+}
+
+.fastFashionMarkers .markerPopUp .closePopUp {
+  width: auto;
+  height: 3rem;
+}
+
+.fastFashionMarkers .markerPopUp .closePopUp:hover {
+  cursor: pointer;
+}
+
+.fastFashionMarkers .showMarkerPopUp {
+  opacity: 1 !important;
+  z-index: 20;
+}

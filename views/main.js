@@ -1,17 +1,22 @@
 import { trashPileSelectorSelected } from "./componentsJs/trashPile.js";
-import { makeLineGraph, updateLineGraph } from "./componentsJs/lineGraph.js";
+import { makeLineGraph } from "./componentsJs/lineGraph.js";
 
 const trashPileDivSelectors = document.querySelector(".trashPileDivSelectors");
-const lineGraphSelectors = document.querySelector(".lineGraphSelectors");
-const lineGraphSelectorsInputs = document.querySelectorAll(
-  ".lineGraphSelectors input"
-);
 const trashPileFull = document.querySelector(".trashPileFull");
 const body = document.querySelector("body");
 const carrousel = document.querySelector(".carrousel");
 const carrouselInner = document.querySelector(".carrouselInner");
 const containerDetails = document.querySelector(".containerDetails");
+const fastFashionMarkers = document.querySelector(".fastFashionMarkers");
+const moreInfo = document.querySelector(".moreInfo");
 const landing = document.querySelector(".landing");
+const backContainer = document.querySelector(".backContainer");
+const backTrash = document.querySelector(".backTrash");
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+  landing.scrollTo(0, 0);
+};
 
 // Trashpile
 trashPileDivSelectors.addEventListener("click", function (event) {
@@ -20,16 +25,6 @@ trashPileDivSelectors.addEventListener("click", function (event) {
 
 // linegraph
 makeLineGraph();
-
-lineGraphSelectors.addEventListener("click", function (event) {
-  if (event.target.parentElement.classList[0] === "lineGraphInputAndLabel") {
-    const unCheckedInputs = [];
-    lineGraphSelectorsInputs.forEach((input) => {
-      if (!input.checked) unCheckedInputs.push(input.id);
-    });
-    updateLineGraph(unCheckedInputs);
-  }
-});
 
 // Trashpiletofullpage
 trashPileFull.addEventListener("click", function (event) {
@@ -45,10 +40,12 @@ trashPileFull.addEventListener("click", function (event) {
   }
 });
 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-  landing.scrollTo(0, 0);
-};
+backContainer.addEventListener("click", function (event) {
+  body.classList.remove("toTheRight");
+});
+backTrash.addEventListener("click", function (event) {
+  body.classList.remove("toTheLeft");
+});
 
 landing.addEventListener("scroll", function (event) {
   if (event.target.scrollTop > 10) {
@@ -101,13 +98,13 @@ carrousel.addEventListener("click", function (event) {
   }
 });
 
-// container details
-containerDetails.addEventListener("click", function (event) {
-  if (!document.querySelector(".showPopUp")) {
+function togglePopUp(event, showPopUpClass, elementClass) {
+  const activePopUp = document.querySelector(`.${showPopUpClass}`);
+  if (!activePopUp) {
     event.path.forEach((element) => {
       if (element.classList) {
-        if (element.classList.contains("pile")) {
-          element.querySelector(".pilePopUp").classList.add("showPopUp");
+        if (element.classList.contains(elementClass)) {
+          element.lastChild.classList.add(showPopUpClass);
         }
       }
     });
@@ -115,9 +112,23 @@ containerDetails.addEventListener("click", function (event) {
     event.path.forEach((element) => {
       if (element.classList) {
         if (element.classList.contains("closePopUp")) {
-          element.parentElement.parentElement.classList.remove("showPopUp");
+          activePopUp.classList.remove(showPopUpClass);
         }
       }
     });
   }
+}
+
+// container details
+containerDetails.addEventListener("click", function (event) {
+  togglePopUp(event, "showContainerPopUp", "pile");
+});
+
+// fastFashionMarkers
+fastFashionMarkers.addEventListener("click", function (event) {
+  togglePopUp(event, "showMarkerPopUp", "marker");
+});
+
+moreInfo.addEventListener("click", function (event) {
+  togglePopUp(event, "showMoreInfoPopUp", "moreInfo");
 });

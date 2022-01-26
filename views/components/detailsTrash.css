@@ -13,6 +13,19 @@
   align-items: center;
 }
 
+.trashDetails .backTrash {
+  position: absolute;
+  right: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8rem;
+  width: auto;
+}
+
+.trashDetails .backTrash:hover {
+  cursor: pointer;
+}
+
 .trashDetails article {
   height: 100%;
 }
@@ -30,5 +43,4 @@
 
 .trashDetails img {
   width: 40vw;
-  height: 40vw;
 }
