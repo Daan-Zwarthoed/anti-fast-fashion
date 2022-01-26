@@ -6,7 +6,9 @@ https://anti-fast-fashion.herokuapp.com/
 
 ### Concept
 
-Wij willen mensen overtuigen om niet hun kleren weg te gooien.
+With this site we want to encourage people to stop participating in Fast Fashion. 
+
+![concept photo](https://github.com/Daan-Zwarthoed/anti-fast-fashion/blob/main/public/images/siteScreenshot.jpeg)
 
 ### Installation
 
@@ -14,11 +16,18 @@ Wij willen mensen overtuigen om niet hun kleren weg te gooien.
 1. Then run `npm install` to install the dependencies
 1. Then run `npm run dev` to start a dev localhost
 
-### Logboek en reflectie
-Logboek en reflectie vind je in onze [wiki](https://github.com/Daan-Zwarthoed/anti-fast-fashion/wiki)
+### Packages
+For this project we used 
+* express
+* nodemon
+* path
+* path
+* d3
 
-### Bronnen
-* 
+### Contributors
+* Daan Zwarthoed - Code
+* Dewi Verkooij - Visuals
+* Tim van der Ham - Visuals and animations
 
 ### Liscense
 MIT liscense
