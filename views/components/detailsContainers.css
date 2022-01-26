@@ -77,8 +77,9 @@
   align-items: flex-end;
 }
 
-.containerDetails .pilePopUp video {
+.containerDetails .pilePopUp iframe {
   height: 8rem;
+  width: 12rem;
   margin-top: 1rem;
 }
 

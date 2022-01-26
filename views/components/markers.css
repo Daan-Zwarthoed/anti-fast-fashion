@@ -4,15 +4,17 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 6rem;
+  padding: 0 10vw 0 10vw;
   position: relative;
 }
 
 .fastFashionMarkers .marker {
-  width: 30%;
-  margin: 0.5rem 0 0.5rem 0;
+  width: 25%;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .fastFashionMarkers .marker > img {

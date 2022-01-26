@@ -58,9 +58,9 @@ landing.addEventListener("scroll", function (event) {
     trashPileFull.children[0].style = "transform: scale(1)";
     trashPileFull.children[1].style = "transform: scale(1)";
   } else {
+    body.classList.add("showFullPage");
     landing.classList.remove("stateIsScroll");
     landing.classList.add("stateIsBottom");
-    body.classList.add("showFullPage");
     setTimeout(() => {
       body.classList.add("fullPageShowing");
     }, 2000);
