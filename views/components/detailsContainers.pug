@@ -5,7 +5,7 @@ mixin pile(precent, title, image, textPopUp, backgroundPopUp, videoPopUp)
     img(src=`images/piles/${image}.png`)
     .pilePopUp
       img(src=`images/backgroundPopUp/${backgroundPopUp}.png`)
-      p=textPopUp
+      p(class=backgroundPopUp)= textPopUp
       .closeAndVideo
         img.closePopUp(src="images/closePopUp.png")
         if(videoPopUp)

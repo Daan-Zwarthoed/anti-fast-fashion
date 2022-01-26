@@ -48,16 +48,18 @@ backTrash.addEventListener("click", function (event) {
 });
 
 landing.addEventListener("scroll", function (event) {
-  if (event.target.scrollTop > 10) {
+  if (event.target.scrollTop < 10) {
+    landing.classList.remove("stateIsScroll");
+    trashPileFull.children[0].style = "transform: scale(0.9)";
+    trashPileFull.children[1].style = "transform: scale(0.9)";
+  } else if (event.target.scrollTop < window.innerHeight - 10) {
     landing.classList.add("stateIsScroll");
+    landing.classList.remove("stateIsBottom");
     trashPileFull.children[0].style = "transform: scale(1)";
     trashPileFull.children[1].style = "transform: scale(1)";
   } else {
     landing.classList.remove("stateIsScroll");
-    trashPileFull.children[0].style = "transform: scale(0.9)";
-    trashPileFull.children[1].style = "transform: scale(0.9)";
-  }
-  if (event.target.scrollTop > window.innerHeight + 10) {
+    landing.classList.add("stateIsBottom");
     body.classList.add("showFullPage");
     setTimeout(() => {
       body.classList.add("fullPageShowing");

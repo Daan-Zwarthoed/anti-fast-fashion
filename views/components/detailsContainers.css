@@ -79,6 +79,7 @@
 
 .containerDetails .pilePopUp video {
   height: 8rem;
+  margin-top: 1rem;
 }
 
 .containerDetails .pilePopUp > img {
@@ -97,4 +98,12 @@
 .containerDetails .showContainerPopUp {
   opacity: 1 !important;
   z-index: 20;
+}
+
+.dressRight {
+  max-width: 20rem;
+}
+
+.turtleLeftUp {
+  max-width: 10rem;
 }

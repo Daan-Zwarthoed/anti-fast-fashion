@@ -31,11 +31,14 @@
 
 .scrollStateTitle,
 .scrollStatePile,
-.stateIsScroll .landingStateTitle {
+.bottomStateTitle,
+.stateIsScroll .landingStateTitle,
+.stateIsBottom .landingStateTitle {
   opacity: 0;
 }
 
-.stateIsScroll .scrollStateTitle {
+.stateIsScroll .scrollStateTitle,
+.stateIsBottom .bottomStateTitle {
   opacity: 1;
 }
 
@@ -85,9 +88,13 @@
   right: 13rem;
   font-style: italic;
 }
-
 .scrollStateTitle h2 {
   font-size: 2.5rem;
+}
+.scrollStateTitle p {
+  font-weight: lighter;
+  font-style: italic;
+  width: 10rem;
 }
 
 .scrollStateTitle .textAndArrowTitle img {
@@ -103,6 +110,41 @@
 .scrollStateTitle .sale5 {
   top: 1.8rem;
   right: 10rem;
+}
+
+.bottomStateTitle {
+  position: relative;
+}
+
+.bottomStateTitle h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.bottomStateTitle .trashTitle {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottomStateTitle .trashTitle img {
+  width: 2rem;
+  height: auto;
+  /* margin- */
+}
+
+.bottomStateTitle .containerTitle {
+  position: absolute;
+  top: 14rem;
+  right: 8rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .trashPileFull {

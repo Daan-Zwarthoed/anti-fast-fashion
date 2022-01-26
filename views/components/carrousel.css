@@ -50,6 +50,11 @@
   width: 30vw !important;
 }
 
+.carrouselElement h4 {
+  font-size: 1.2rem;
+  margin-bottom: 2rem !important;
+}
+
 .carrouselElement:first-of-type {
   margin-left: 1rem;
 }

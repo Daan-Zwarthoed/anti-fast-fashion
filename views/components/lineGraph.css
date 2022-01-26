@@ -1,5 +1,5 @@
 .lineGraph {
-  margin-bottom: 3rem;
+  margin: 6rem 0 6rem 0;
 }
 .line {
   fill: none;
@@ -26,6 +26,10 @@
   flex-direction: row;
   align-items: center;
   margin: 0.5rem 0 0.5rem 0;
+}
+
+.lineGraphPAndDiv > p {
+  width: 12rem;
 }
 
 .lineGraphPAndDiv > div {

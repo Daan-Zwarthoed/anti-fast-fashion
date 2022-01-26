@@ -1,8 +1,3 @@
-.scroll h4,
-.scroll label,
-.scroll p {
-  font-family: "Work Sans", sans-serif;
-}
 .scroll {
   display: flex;
   flex-direction: column;
