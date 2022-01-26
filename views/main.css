@@ -31,7 +31,7 @@ body.toTheLeft {
 
 body.fullPageShowing {
   height: auto;
-  overflow: visible;
+  overflow-y: visible;
 }
 
 .hidden {

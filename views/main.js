@@ -57,8 +57,7 @@ landing.addEventListener("scroll", function (event) {
     trashPileFull.children[0].style = "transform: scale(0.9)";
     trashPileFull.children[1].style = "transform: scale(0.9)";
   }
-
-  if (event.target.scrollTop === window.innerHeight) {
+  if (event.target.scrollTop > window.innerHeight + 10) {
     body.classList.add("showFullPage");
     setTimeout(() => {
       body.classList.add("fullPageShowing");
