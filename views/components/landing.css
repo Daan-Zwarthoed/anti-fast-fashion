@@ -158,6 +158,7 @@
 
 .trashPileFull > img {
   width: 60vw;
+  max-height: 100%;
   position: absolute;
   bottom: 0;
   cursor: pointer;
@@ -181,15 +182,13 @@
   left: 50%;
   transform: translateX(-50%);
   height: 2rem;
-  opacity: 0;
+  z-index: 10;
+  animation: bounce 4s;
+  animation-iteration-count: infinite;
 }
 
 .showFullPage .landing {
   overflow: hidden;
-}
-
-.showFullPage .scrollDown {
-  opacity: 1;
 }
 
 .showFullPage .trashPileFull > img:first-of-type {
@@ -203,11 +202,6 @@
 
 .fullPageShowing .trashPileFull > img:hover {
   animation: shake 1s;
-  animation-iteration-count: infinite;
-}
-
-.showFullPage .scrollDown {
-  animation: bounce 4s;
   animation-iteration-count: infinite;
 }
 

@@ -102,7 +102,7 @@ carrousel.addEventListener("click", function (event) {
 function togglePopUp(event, showPopUpClass, elementClass) {
   const activePopUp = document.querySelector(`.${showPopUpClass}`);
   if (!activePopUp) {
-    event.path.forEach((element) => {
+    event.composedPath().forEach((element) => {
       if (element.classList) {
         if (element.classList.contains(elementClass)) {
           element.lastChild.classList.add(showPopUpClass);
@@ -110,7 +110,7 @@ function togglePopUp(event, showPopUpClass, elementClass) {
       }
     });
   } else {
-    event.path.forEach((element) => {
+    event.composedPath().forEach((element) => {
       if (element.classList) {
         if (element.classList.contains("closePopUp")) {
           activePopUp.classList.remove(showPopUpClass);
