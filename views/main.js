@@ -12,6 +12,7 @@ const moreInfo = document.querySelector(".moreInfo");
 const landing = document.querySelector(".landing");
 const backContainer = document.querySelector(".backContainer");
 const backTrash = document.querySelector(".backTrash");
+let stopCheckingScroll = false;
 
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
@@ -48,22 +49,26 @@ backTrash.addEventListener("click", function (event) {
 });
 
 landing.addEventListener("scroll", function (event) {
-  if (event.target.scrollTop < 10) {
-    landing.classList.remove("stateIsScroll");
-    trashPileFull.children[0].style = "transform: scale(0.9)";
-    trashPileFull.children[1].style = "transform: scale(0.9)";
-  } else if (event.target.scrollTop < window.innerHeight - 10) {
-    landing.classList.add("stateIsScroll");
-    landing.classList.remove("stateIsBottom");
-    trashPileFull.children[0].style = "transform: scale(1)";
-    trashPileFull.children[1].style = "transform: scale(1)";
-  } else {
-    body.classList.add("showFullPage");
-    landing.classList.remove("stateIsScroll");
-    landing.classList.add("stateIsBottom");
-    setTimeout(() => {
-      body.classList.add("fullPageShowing");
-    }, 2000);
+  if (!stopCheckingScroll) {
+    if (event.target.scrollTop < 10) {
+      landing.classList.remove("stateIsScroll");
+      trashPileFull.children[0].style = "transform: scale(0.9)";
+      trashPileFull.children[1].style = "transform: scale(0.9)";
+    } else if (event.target.scrollTop < window.innerHeight - 10) {
+      landing.classList.add("stateIsScroll");
+      landing.classList.remove("stateIsBottom");
+      trashPileFull.children[0].style = "transform: scale(1)";
+      trashPileFull.children[1].style = "transform: scale(1)";
+    } else {
+      stopCheckingScroll = true;
+      body.classList.add("showFullPage");
+      landing.classList.remove("stateIsScroll");
+      landing.classList.add("stateIsBottom");
+      setTimeout(() => {
+        stopCheckingScroll = false;
+        body.classList.add("fullPageShowing");
+      }, 2000);
+    }
   }
 });
 

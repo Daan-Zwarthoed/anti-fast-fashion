@@ -4,7 +4,7 @@ mixin marker(title, image, textPopUp, backgroundPopUp)
     p= title
     .markerPopUp
       img.backgroundClothing(src=`images/backgroundPopUp/${backgroundPopUp}.png`)
-      p=textPopUp
+      p(class=backgroundPopUp)=textPopUp
       img.closePopUp(src="images/closePopUp.png")
 .fastFashionMarkers
   +marker("Ze zien duurzaamheid als een trend", "handsHoldingWorld", "Veel merken gebruiken tegenwoordig de woorden ‘groen’, ‘duurzaam’ of ‘verantwoord’. Geloof deze merken nooit meteen op hun woord. Onderzoek altijd wat er dan zo duurzaam is aan dit merk. Een merk is nog lang niet duurzaam wanneer het hier en daar stoffen als biokatoen en tencel gebruikt. Ook zeker niet H&M met hun zogenaamde Conscious Collection.", "dressRight",)
